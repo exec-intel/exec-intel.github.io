@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Execution Intelligence — Synopsis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B2A4A;
+    --line: #EFF5FF;
+    --line-dim: rgba(239,245,255,0.68);
+    --line-faint: rgba(239,245,255,0.16);
+    --grid: rgba(239,245,255,0.05);
+    --cyan: #6FD3FF;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid) 0, var(--grid) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, var(--grid) 0, var(--grid) 1px, transparent 1px, transparent 40px),
+      var(--bg);
+    color:var(--line); font-family:var(--sans); line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:720px; margin:0 auto; padding:0 28px 80px; }
+  a.back{
+    display:inline-block; margin:40px 0 0; font-family:var(--mono); font-size:12px;
+    color:var(--line-dim); text-decoration:none; letter-spacing:0.04em;
+  }
+  a.back:hover{ color:var(--cyan); }
+  header{ padding:24px 0 50px; border-bottom:1px dashed var(--line-faint); margin-bottom:50px; }
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--cyan); margin:0 0 12px; }
+  h1{ font-family:var(--mono); font-weight:800; font-size:clamp(26px,4.5vw,36px); margin:0; letter-spacing:-0.01em; }
+
+  section{ margin-bottom:56px; }
+  .section-label{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--cyan); margin-bottom:18px;
+  }
+  p{ font-size:16px; color:var(--line-dim); margin:0 0 18px; }
+  p strong{ color:var(--line); font-weight:600; }
+
+  footer{
+    text-align:center; padding:40px 0 0; margin-top:20px; border-top:1px dashed var(--line-faint);
+    font-family:var(--mono); font-size:10.5px; color:var(--line-dim); letter-spacing:0.06em; opacity:0.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Execution Intelligence</p>
+    <h1>Synopsis</h1>
+  </header>
+
+  <section>
+    <p class="section-label">Functional Summary</p>
+    <p>Execution Intelligence (EI) is a layer that sits between an organization's Annual Operating Plan and the people responsible for delivering it. It ingests the plan — goals, KPIs, and how they cascade across teams — and tracks commitments captured in natural language during normal reviews, rather than through forms or spreadsheets.</p>
+    <p>It follows up automatically against agreed review cadences, flags deviations against actual data, and routes exceptions for a decision instead of letting them pass unnoticed. Every commitment, override, and outcome is recorded, which lets the system surface the closest relevant precedent when a similar situation recurs — so judgment about what's likely to work compounds over time rather than resetting each cycle.</p>
+    <p><strong>EI does not make decisions on its own.</strong> It makes execution continuously visible and prompts the people accountable for it to act.</p>
+  </section>
+
+  <section>
+    <p class="section-label">Technical Summary</p>
+    <p>The system combines a deterministic core with AI at two specific points. The core is a knowledge graph — the plan, its KPIs, and their dependencies — and an immutable ledger that logs every commitment and outcome as it happens. Reconciliation, tolerance checks, approval routing, and scheduling all run as rule-based logic against this data, not as model output.</p>
+    <p>AI is used for <strong>ingestion</strong> — parsing a plan document into structured graph entries, confirmed by a person before anything goes live — and for <strong>capture</strong> — turning a commitment typed in plain language into a structured, tagged record.</p>
+    <p>Historical judgment compounds through <strong>retrieval, not fine-tuning</strong>: overrides of past patterns are logged as scored hypotheses, and the system retrieves the closest relevant precedent from an organization's own data, rather than relying on a model trained on it. The platform is model-agnostic, integrating with whichever LLM an organization already has under contract.</p>
+  </section>
+
+  <a class="back" href="index.html">← Back to Execution Intelligence</a>
+
+  <footer>EXECUTION INTELLIGENCE — SYNOPSIS</footer>
+
+</div>
+</body>
+</html>
